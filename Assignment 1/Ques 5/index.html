@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input {
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        #output {
+            margin-top: 20px;
+            text-align: center;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Enter your address" required>
+
+            <label for="sex">Sex:</label>
+            <select id="sex" name="sex" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <br>
+
+            <label for="Language ">Language Known:</label>
+            <select id="Language" name="Language" required>
+                <option value="">Select</option>
+                <option value="C">C</option>
+                <option value="C++">C++</option>
+                <option value="Java">Java</option>
+                <option value="ASP">ASP</option>
+                <option value="Others">Other</option>
+            </select>
+            
+            <br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter a password" required>
+
+            <input type="submit" value="Register">
+        </form>
+
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var address = document.getElementById("address").value;
+            var sex = document.getElementById("sex").value;
+            var languages = document.getElementById("languages").value;
+            var password = document.getElementById("password").value;
+
+            if (name === "" || age === "" || address === "" || sex === "" || languages === "" || password === "") {
+                document.getElementById("output").innerHTML = "Please fill in all fields.";
+                return false;
+            }
+
+            if (!/^[a-zA-Z ]+$/.test(name)) {
+                document.getElementById("output").innerHTML = "Invalid name. Only alphabets and spaces are allowed.";
+                return false;
+            }
+
+            if (isNaN(age) || age < 18) {
+                document.getElementById("output").innerHTML = "Invalid age. Age must be a number and at least 18.";
+                return false;
+            }
+
+            if (sex === "") {
+                document.getElementById("output").innerHTML = "Please select your sex.";
+                return false;
+            }
+
+            if (password.length < 8) {
+                document.getElementById("output").innerHTML = "Invalid password. Password must be at least 8 characters.";
+                return false;
+            }
+
+            document.getElementById("output").innerHTML = "Registration successful!";
+            return true;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+/* Style for Menu elements */
+Menu {
+    display: block;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Style for individual elements within Menu */
+rollno {
+    font-weight: bold;
+    color: #007bff;
+}
+
+veg, cusine, DishName, Price {
+    display: block;
+    margin-top: 5px;
+}
+
+veg {
+    color: green;
+}
+
+/* Additional styles can be added as needed */

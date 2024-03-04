@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester Marks</title>
+    <style>
+        body {
+            margin: 2px;
+            padding: 2px;
+            overflow: hidden;
+        }
+
+        #container {
+            display: flex;
+            height: 100vh;
+        }
+
+        #frame1, #frame2 {
+            flex: 1;
+            border: 1px solid #ccc;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Semester Marks</h1>
+    <div id="container">
+        <iframe id="frame1" src="semester-1.html" frameborder="0"></iframe>
+        <iframe id="frame2" src="semester-2.html" frameborder="0"></iframe>
+    </div>
+</body>
+</html>

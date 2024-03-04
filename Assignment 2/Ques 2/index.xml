@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="menu_restaurant.css"?>
+
+<MenuCatalog>
+    <!-- Indian Cuisine -->
+    <Menu>
+        <rollno>1</rollno>
+        <veg>true</veg>
+        <cusine>Indian</cusine>
+        <DishName>Butter Chicken</DishName>
+        <Price>12.99</Price>
+    </Menu>
+    
+    <Menu>
+        <rollno>2</rollno>
+        <veg>false</veg>
+        <cusine>Indian</cusine>
+        <DishName>Paneer Tikka</DishName>
+        <Price>9.99</Price>
+    </Menu>
+    
+    <!-- Add more Indian Cuisine items as needed -->
+
+    <!-- Continental Cuisine -->
+    <Menu>
+        <rollno>11</rollno>
+        <veg>true</veg>
+        <cusine>Continental</cusine>
+        <DishName>Grilled Salmon</DishName>
+        <Price>16.99</Price>
+    </Menu>
+    
+    <Menu>
+        <rollno>12</rollno>
+        <veg>false</veg>
+        <cusine>Continental</cusine>
+        <DishName>Chicken Alfredo Pasta</DishName>
+        <Price>14.99</Price>
+    </Menu>
+
+    <!-- Add more Continental Cuisine items as needed -->
+
+    <!-- Chinese Cuisine -->
+    <Menu>
+        <rollno>21</rollno>
+        <veg>true</veg>
+        <cusine>Chinese</cusine>
+        <DishName>Vegetable Spring Rolls</DishName>
+        <Price>7.99</Price>
+    </Menu>
+    
+    <Menu>
+        <rollno>22</rollno>
+        <veg>false</veg>
+        <cusine>Chinese</cusine>
+        <DishName>General Tso's Chicken</DishName>
+        <Price>10.99</Price>
+    </Menu>
+
+    <!-- Add more Chinese Cuisine items as needed -->
+</MenuCatalog>

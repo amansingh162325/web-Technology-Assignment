@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+    <style>
+        body {
+            transition: background-color 0.5s;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            cursor: pointer;
+            /* Button in center of the page */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+    </style>
+</head>
+<body onclick="randomColor()">
+    <h1><center>Click on button to change the background color</h1></center>
+    <button onclick="randomColor()">Change Color</button>
+
+    <script>
+        function randomColor() {
+            // Generate random values for RGB
+            var red = Math.floor(Math.random() * 256);
+            var green = Math.floor(Math.random() * 256);
+            var blue = Math.floor(Math.random() * 256);
+
+            // Create the RGB color string
+            var color = "rgb(" + red + "," + green + "," + blue + ")";
+
+            // Set the background color of the body
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
